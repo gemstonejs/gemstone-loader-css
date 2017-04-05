@@ -1,0 +1,38 @@
+##
+##  GemstoneJS -- Gemstone JavaScript Technology Stack
+##  Copyright (c) 2016-2017 Gemstone Project <http://gemstonejs.com>
+##  Licensed under Apache License 2.0 <https://spdx.org/licenses/Apache-2.0>
+##
+
+extends:
+    - eslint:recommended
+    - eslint-config-standard
+
+parserOptions:
+    ecmaVersion: 8
+    sourceType:  module
+
+parser: babel-eslint
+
+env:
+    browser:       true
+    node:          true
+    commonjs:      true
+
+globals:
+    process:       true
+
+rules:
+    indent:                              [ "error", 4, { "SwitchCase": 1 } ]
+    linebreak-style:                     [ "error", "unix" ]
+    semi:                                [ "error", "never" ]
+    operator-linebreak:                  [ "error", "after", { "overrides": { "&&": "before", "||": "before", ":": "before" } } ]
+    brace-style:                         [ "error", "stroustrup", { "allowSingleLine": true } ]
+    quotes:                              [ "error", "double" ]
+    no-multi-spaces:                     off
+    no-multiple-empty-lines:             off
+    key-spacing:                         off
+    object-property-newline:             off
+    curly:                               off
+    space-in-parens:                     off
+
