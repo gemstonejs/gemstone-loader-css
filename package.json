@@ -20,18 +20,18 @@
     },
     "devDependencies": {
         "eslint":                         "~3.19.0",
-        "eslint-config-standard":         "~10.2.0",
+        "eslint-config-standard":         "~10.2.1",
         "eslint-plugin-standard":         "~3.0.1",
         "eslint-plugin-promise":          "~3.5.0",
         "eslint-plugin-import":           "~2.2.0",
         "eslint-plugin-node":             "~4.2.2",
-        "babel-eslint":                   "~7.2.1"
+        "babel-eslint":                   "~7.2.3"
     },
     "dependencies" : {
         "co":                             "~4.6.0",
         "loader-utils":                   "~1.1.0",
-        "inline-assets":                  "~1.1.4",
-        "postcss":                        "~5.2.16",
+        "inline-assets":                  "~1.1.5",
+        "postcss":                        "~5.2.17",
         "postcss-scss":                   "~0.4.1",
         "precss":                         "~1.4.0",
         "postcss-cssnext":                "~2.10.0",
@@ -39,7 +39,7 @@
         "postcss-utilities":              "~0.7.0",
         "postcss-easings":                "~0.3.0",
         "postcss-hexrgba":                "~0.2.1",
-        "style-scope":                    "~0.9.0",
+        "style-scope":                    "~0.9.1",
         "postcss-reporter":               "~3.0.0",
         "autoprefixer":                   "~6.7.7"
     },
