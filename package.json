@@ -23,7 +23,7 @@
         "eslint-config-standard":         "~10.2.1",
         "eslint-plugin-standard":         "~3.0.1",
         "eslint-plugin-promise":          "~3.5.0",
-        "eslint-plugin-import":           "~2.3.0",
+        "eslint-plugin-import":           "~2.6.0",
         "eslint-plugin-node":             "~5.0.0",
         "babel-eslint":                   "~7.2.3"
     },
@@ -34,12 +34,12 @@
         "postcss":                        "~5.2.17",
         "postcss-scss":                   "~0.4.1",
         "precss":                         "~1.4.0",
-        "postcss-cssnext":                "~2.10.0",
+        "postcss-cssnext":                "~2.11.0",
         "postcss-alias":                  "~1.0.0",
         "postcss-utilities":              "~0.7.0",
         "postcss-easings":                "~0.3.0",
         "postcss-hexrgba":                "~0.2.1",
-        "style-scope":                    "~0.9.4",
+        "style-scope":                    "~0.9.5",
         "postcss-reporter":               "~3.0.0",
         "autoprefixer":                   "~6.7.7"
     },
