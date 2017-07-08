@@ -39,7 +39,7 @@
         "postcss-utilities":              "~0.7.0",
         "postcss-easings":                "~1.0.0",
         "postcss-hexrgba":                "~0.2.1",
-        "style-scope":                    "~0.9.6",
+        "style-scope":                    "~0.9.7",
         "postcss-reporter":               "~4.0.0",
         "autoprefixer":                   "~7.1.2"
     },
