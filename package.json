@@ -2,7 +2,7 @@
     "name":        "gemstone-loader-css",
     "homepage":    "http://github.com/gemstonejs/gemstone-loader-css",
     "description": "Webpack Loader for CSS files in Gemstone JavaScript Technology Stack",
-    "version":     "0.9.15",
+    "version":     "0.9.16",
     "license":     "Apache-2.0",
     "author": {
         "name":    "Gemstone Project",
