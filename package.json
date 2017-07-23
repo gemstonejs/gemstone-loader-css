@@ -19,23 +19,23 @@
         "url":  "http://github.com/gemstonejs/gemstone-loader-css/issues"
     },
     "devDependencies": {
-        "eslint":                         "~4.2.0",
+        "eslint":                         "~4.3.0",
         "eslint-config-standard":         "~10.2.1",
         "eslint-plugin-standard":         "~3.0.1",
         "eslint-plugin-promise":          "~3.5.0",
         "eslint-plugin-import":           "~2.7.0",
-        "eslint-plugin-node":             "~5.1.0",
+        "eslint-plugin-node":             "~5.1.1",
         "babel-eslint":                   "~7.2.3"
     },
     "dependencies" : {
         "co":                             "~4.6.0",
         "loader-utils":                   "~1.1.0",
         "inline-assets":                  "~1.2.2",
-        "postcss":                        "~6.0.6",
+        "postcss":                        "~6.0.8",
         "postcss-scss":                   "~1.0.2",
         "precss":                         "~2.0.0",
         "postcss-cssnext":                "~3.0.2",
-        "postcss-alias":                  "~1.0.0",
+        "postcss-alias":                  "~2.0.0",
         "postcss-utilities":              "~0.7.0",
         "postcss-easings":                "~1.0.0",
         "postcss-hexrgba":                "~0.2.1",
