@@ -13,7 +13,6 @@ const PostCSSSCSS         = require("postcss-scss")
 const PreCSS              = require("precss")
 const CSSNext             = require("postcss-cssnext")
 const PostCSSAlias        = require("postcss-alias")
-const PostCSSUtilities    = require("postcss-utilities")
 const PostCSSEasings      = require("postcss-easings")
 const PostCSSHexRGBA      = require("postcss-hexrgba")
 const PostCSSScope        = require("style-scope/postcss")
@@ -35,7 +34,13 @@ module.exports = function (content) {
 
         /*  transpile CSS via PostCSS/LESS/Scope/Autoprefixer */
         let result = yield PostCSS([
-            PreCSS({}),
+            PreCSS({
+                /*  disable referenced plugins which still require PostCSS 5  */
+                "variables": { disable: true },
+                "at-root":   { disable: true },
+                "extend":    { disable: true },
+                "lookup":    { disable: true }
+            }),
             CSSNext({
                 features: {
                     /*  disable CSSNext's PostCSS plugins which are already in PreCSS
@@ -55,7 +60,6 @@ module.exports = function (content) {
                 }
             }),
             PostCSSAlias(),
-            PostCSSUtilities(),
             PostCSSEasings(),
             PostCSSHexRGBA(),
             PostCSSScope({
