@@ -34,6 +34,7 @@
         "postcss":                        "~6.0.14",
         "postcss-scss":                   "~1.0.2",
         "precss":                         "~2.0.0",
+        "postcss-import":                 "~11.0.0",
         "postcss-cssnext":                "~3.0.2",
         "postcss-alias":                  "~2.0.0",
         "postcss-easings":                "~1.0.1",
