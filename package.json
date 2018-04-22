@@ -23,9 +23,9 @@
         "eslint-config-standard":         "11.0.0",
         "eslint-plugin-standard":         "3.0.1",
         "eslint-plugin-promise":          "3.7.0",
-        "eslint-plugin-import":           "2.10.0",
+        "eslint-plugin-import":           "2.11.0",
         "eslint-plugin-node":             "6.0.1",
-        "babel-eslint":                   "8.2.2"
+        "babel-eslint":                   "8.2.3"
     },
     "dependencies" : {
         "co":                             "4.6.0",
@@ -42,7 +42,7 @@
         "postcss-reporter":               "5.0.0",
         "style-scope":                    "0.9.11",
         "posthtml":                       "0.11.3",
-        "autoprefixer":                   "8.2.0"
+        "autoprefixer":                   "8.3.0"
     },
     "engines": {
         "node":                           ">=7.6.0"
