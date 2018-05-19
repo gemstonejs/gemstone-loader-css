@@ -23,14 +23,14 @@
         "eslint-config-standard":         "11.0.0",
         "eslint-plugin-standard":         "3.1.0",
         "eslint-plugin-promise":          "3.7.0",
-        "eslint-plugin-import":           "2.11.0",
+        "eslint-plugin-import":           "2.12.0",
         "eslint-plugin-node":             "6.0.1",
         "babel-eslint":                   "8.2.3"
     },
     "dependencies" : {
         "co":                             "4.6.0",
         "loader-utils":                   "1.1.0",
-        "inline-assets":                  "1.2.6",
+        "inline-assets":                  "1.2.7",
         "postcss":                        "6.0.22",
         "postcss-scss":                   "1.0.5",
         "precss":                         "3.1.2",
@@ -42,7 +42,7 @@
         "postcss-reporter":               "5.0.0",
         "style-scope":                    "0.9.12",
         "posthtml":                       "0.11.3",
-        "autoprefixer":                   "8.4.1"
+        "autoprefixer":                   "8.5.0"
     },
     "engines": {
         "node":                           ">=7.6.0"
