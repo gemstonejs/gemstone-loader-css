@@ -5,19 +5,21 @@
 */
 
 /*  load external requirements  */
-const co                  = require("co")
-const loaderUtils         = require("loader-utils")
-const inlineAssets        = require("inline-assets")
-const PostCSS             = require("postcss")
-const PostCSSSCSS         = require("postcss-scss")
-const PreCSS              = require("precss")
-const CSSNext             = require("postcss-cssnext")
-const PostCSSImport       = require("postcss-import")
-const PostCSSAlias        = require("postcss-alias")
-const PostCSSEasings      = require("postcss-easings")
-const PostCSSHexRGBA      = require("postcss-hexrgba")
-const PostCSSScope        = require("style-scope/postcss")
-const Autoprefixer        = require("autoprefixer")
+const co                       = require("co")
+const loaderUtils              = require("loader-utils")
+const inlineAssets             = require("inline-assets")
+const PostCSS                  = require("postcss")
+const PostCSSSCSS              = require("postcss-scss")
+const PostCSSImport            = require("postcss-import")
+const PostCSSExtendRule        = require("postcss-extend-rule")
+const PostCSSAdvancedVariables = require("postcss-advanced-variables")
+const PostCSSPresetEnv         = require("postcss-preset-env")
+const PostCSSPropertyLookup    = require("postcss-property-lookup")
+const PostCSSAlias             = require("postcss-alias")
+const PostCSSEasings           = require("postcss-easings")
+const PostCSSHexRGBA           = require("postcss-hexrgba")
+const PostCSSNested            = require("postcss-nested")
+const PostCSSScope             = require("style-scope/postcss")
 
 /*  the exported Webpack loader function  */
 module.exports = function (content) {
@@ -32,48 +34,32 @@ module.exports = function (content) {
             fully deterministic and can be cached  */
         this.cacheable(true)
 
-        /*  transpile CSS via PostCSS/LESS/Scope/Autoprefixer */
-        let result = yield PostCSS([
+        /*  transpile CSS via PostCSS  */
+        let plugins = [
             PostCSSImport(),
-            PreCSS({
-                /*  disable referenced plugin which makes trouble because of PostCSS 5/6,
-                    although itself does not require PostCSS 5 (strange)  */
-                "import":    { disable: true },
-
-                /*  disable referenced plugins which still require PostCSS 5  */
-                "variables": { disable: true },
-                "at-root":   { disable: true },
-                "extend":    { disable: true },
-                "lookup":    { disable: true }
-            }),
-            CSSNext({
+            PostCSSExtendRule(),
+            PostCSSAdvancedVariables(),
+            PostCSSPresetEnv({
+                stage: 3,                           /*  stage 2-3, plus... */
                 features: {
-                    /*  disable CSSNext's PostCSS plugins which are already in PreCSS
-                        (see also https://github.com/timaschew/postcss-compare-packs)  */
-                    colorFunction:      false, /*  postcss-color-function  */
-                    customMedia:        false, /*  postcss-custom-media  */
-                    customProperties:   false, /*  postcss-custom-properties  */
-                    customSelectors:    false, /*  postcss-custom-selectors  */
-                    mediaQueriesRange:  false, /*  postcss-media-minmax  */
-                    nesting:            false, /*  postcss-nesting  */
-                    pseudoClassMatches: false, /*  postcss-selector-matches  */
-                    pseudoClassNot:     false, /*  postcss-selector-not  */
-
-                    /*  disable CSSNext's PostCSS plugin Autoprefixer, as we add
-                        it outself at the end of the processing  */
-                    autoprefixer:       false
+                    "nesting-rules":         true,  /*  from stage 0  */
+                    "overflow-shorthand":    true   /*  from stage 1  */
+                },
+                browsers: "last 2 versions",
+                autoprefixer: {
+                    browsers: [ "last 2 versions" ]
                 }
             }),
+            PostCSSPropertyLookup(),
             PostCSSAlias(),
             PostCSSEasings(),
             PostCSSHexRGBA(),
+            PostCSSNested(),
             PostCSSScope({
                 rootScope: options.scope
-            }),
-            Autoprefixer({
-                browsers: [ "last 2 versions" ]
             })
-        ]).process(content, {
+        ]
+        let result = yield PostCSS(plugins).process(content, {
             from:   this.resourcePath,
             to:     this.resourcePath,
             parser: PostCSSSCSS,
