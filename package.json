@@ -24,15 +24,15 @@
         "eslint-plugin-standard":         "3.1.0",
         "eslint-plugin-promise":          "3.8.0",
         "eslint-plugin-import":           "2.13.0",
-        "eslint-plugin-node":             "6.0.1",
+        "eslint-plugin-node":             "7.0.1",
         "babel-eslint":                   "8.2.6"
     },
     "dependencies" : {
         "co":                             "4.6.0",
         "loader-utils":                   "1.1.0",
         "inline-assets":                  "1.4.1",
-        "postcss":                        "6.0.23",
-        "postcss-scss":                   "1.0.6",
+        "postcss":                        "7.0.1",
+        "postcss-scss":                   "2.0.0",
         "postcss-import":                 "11.1.0",
         "postcss-alias":                  "2.0.0",
         "postcss-easings":                "1.0.1",
@@ -43,10 +43,10 @@
         "postcss-extend-rule":            "2.0.0",
         "postcss-nested":                 "3.0.0",
         "postcss-property-lookup":        "2.0.0",
-        "postcss-preset-env":             "5.2.2",
+        "postcss-preset-env":             "5.3.0",
         "style-scope":                    "0.9.13",
         "posthtml":                       "0.11.3",
-        "autoprefixer":                   "8.6.5"
+        "autoprefixer":                   "9.0.1"
     },
     "engines": {
         "node":                           ">=7.6.0"
