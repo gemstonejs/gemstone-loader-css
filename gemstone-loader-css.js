@@ -35,7 +35,7 @@ module.exports = function (content) {
         this.cacheable(true)
 
         /*  transpile CSS via PostCSS  */
-        let plugins = [
+        const plugins = [
             PostCSSImport(),
             PostCSSExtendRule(),
             PostCSSAdvancedVariables(),
@@ -68,7 +68,7 @@ module.exports = function (content) {
             this.emitError(`gemstone-loader-css: PostCSS [transpile]: ERROR: ${err}`)
         })
         if (typeof result === "object" && typeof result.warnings === "function") {
-            let warnings = result.warnings()
+            const warnings = result.warnings()
             if (warnings.length > 0)
                 this.emitError(`gemstone-loader-css: PostCSS [transpile]: ERROR: ${warnings.join("\n")}`)
         }
