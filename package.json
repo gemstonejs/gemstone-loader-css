@@ -31,7 +31,7 @@
         "co":                             "4.6.0",
         "loader-utils":                   "1.2.3",
         "inline-assets":                  "1.4.5",
-        "postcss":                        "7.0.25",
+        "postcss":                        "8.4.31",
         "postcss-scss":                   "2.0.0",
         "postcss-import":                 "12.0.1",
         "postcss-alias":                  "2.0.0",
